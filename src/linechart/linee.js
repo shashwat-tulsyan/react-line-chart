@@ -1,5 +1,5 @@
 import React from 'react'
-import {ResponsiveContainer,LineChart,Line,XAxis,YAxis} from 'recharts'
+import {ResponsiveContainer,LineChart,Line,XAxis,YAxis,CartesianGrid} from 'recharts'
 
 const pdata=[
   {
@@ -31,6 +31,7 @@ const Linee = () => {
       <h3>line chart</h3>
       <ResponsiveContainer width="100%" aspect={3}>
         <LineChart data={pdata}>
+          <CartesianGrid/>
           <XAxis dataKey="name" interval={'preserveStartEnd'}/>
           <YAxis/>
           <Line dataKey="fees"/>
